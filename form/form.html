@@ -4,53 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href=form.css">
+    <link rel="stylesheet" href="form.css">
+
 </head>
 <body>
-    <div class="form-container">
-        <h2>Registration Form</h2>
-        <form>
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter Your Name">
-            <div> <label for="e-mail">E-mail</label>
-            <input type="text" id="e-mail" name="e-mail" placeholder="Enter Your E-mail">
-            </div>
-            <div> <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter Your password">
-            </div>
-            <label>Gender</label>
-            <div class="radio-group">
-                <label><input type="radio" name="gender" value="Male" >Male</label>
-                <label><input type="radio" name="gender" value="Male" >Female</label>
-            </div>
-            <label>Skills</label>
-            <div class="checkbox-group">
-                <label for=""><input type="checkbox" name="Skills" value="HTML">HTML</label>
-                 <label for=""><input type="checkbox" name="Skills" value="CSS">CSS</label>
-                  <label for=""><input type="checkbox" name="Skills" value="JS">JS</label>
+<div class="form-container">
 
+<h2>Ragistration form</h2>
+<form>
 
-            </div>
-            <div>
-                <label for="country">Country</label>
-                <select name="country" id="country">
-              <option value="">---select---</option>
-              <option value="India">India</option>
-              <option value="America">America</option>
-              <option value="Japan">Japan</option>
+    <!---name-->
 
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-                </select>
-                
+    <!--email-->
+     <label for="email">E-mail</label>
+    <input type="text" id="email" name="e-mail" placeholder="Enter your email" required>
 
-
-
-            </div>
-        </form>
-
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+    <!--Gender (Radio button)-->
+    <label>Gender</label>
+    <div class="radio-group">
+        <label><input type="radio" name="gender" value="Male" >Male</label>
+        <label><input type="radio" name="gender" value="Female" >Female</label>
+    
+ <!--skills-->
+    <label>skills</label>
+    <div class="checkbox-group">
+        <label for=""><input type="checkbox" name="skills" value="HTML" >HTML</label>
+         <label for=""><input type="checkbox" name="skills" value="CSS" >CSS</label>
+          <label for=""><input type="checkbox" name="skills" value="JS" >JS</label>
+<!--COUNTRY-->
+    <label for="country">country</label>
+    <select name="country" id="country">
+        <option value="">--select--</option>
+        <option value="india">India</option>
+        <option value="usa">usa</option>
+    </select>
+    <div>
+        <label for="message">message</label>
+        <textarea name="message" id="message" rows="4" placeholder="Write your message"></textarea>
+    </div>
+    <button>submit</button>
 
 
 
     </div>
+    </label>
+</form>
+
+ </div>
+    
 </body>
 </html>

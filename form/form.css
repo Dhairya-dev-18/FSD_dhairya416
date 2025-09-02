@@ -1,0 +1,47 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+}
+.form-container{
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,1);
+    width: 400px;
+
+
+}
+label{
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+input[type="text"],input[type="e-mail"],input[type="password"],select,textarea{
+font-size:14px;
+border-radius: 8px;
+box-sizing:border-box; 
+border: 1px solid bisque;
+margin-bottom:15px;
+padding: 10px;
+width: 100%;
+}
+.radio-group,.checkbox-group{
+    margin-bottom: 15px;
+}
+.radio-group label,.checkbox-group label{
+    font-weight: normal;
+    margin-right: 15px;
+
+}
+textarea{
+    resize: vertical;
+
+}
+button:hover{
+    background-color: blanchedalmond;
+}
