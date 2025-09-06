@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Eye-catching portfolio template — replace with your details" />
+  
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" >DT</div>
+        <div>
+          <div style="font-weight:800">Dhairya Tiwari</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">Front-end Developer • Student • Problem Solver</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="hero-card">
+        <p class="name">Hi — I'm Dhairya Tiwari</p>
+        <p class="title">I build fast, accessible and delightful web experiences.</p>
+        <div class="cta-row">
+          <button class="btn btn-primary" onclick="scrollToSection('projects')">View Projects</button>
+          <a class="btn btn-outline" href="mailto:you@example.com">Hire me</a>
+        </div>
+        <div class="socials" aria-hidden>
+          <span class="pill">JavaScript</span>
+          <span class="pill">React</span>
+          <span class="pill">Node</span>
+        </div>
+        <div style="margin-top:18px;color:var(--muted);font-size:14px">I translate ideas into polished UI — currently open to internships and collaborative projects.</div>
+      </div>
+
+      <aside class="profile">
+        <div style="display:flex;gap:14px;align-items:center">
+          <div class="avatar">D</div>
+          <div>
+            <div style="font-weight:800">Dhairya Tiwari</div>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Abes Engineering College </div>
+            <div style="color:var(--muted);font-size:13px">📍 Ghaziabad, India</div>
+          </div>
+        </div>
+        <div style="margin-left:auto;text-align:right">
+          <div style="font-weight:800">Resume</div>
+          <a class="btn btn-outline" href="#" style="display:inline-block;margin-top:8px" >Download</a>
+        </div>
+      </aside>
+    </div>
+
+    <section id="about">
+      <h2>About me</h2>
+      <div class="hero-card" style="padding:18px">
+        <p style="color:var(--muted);margin:0 0 10px 0">I'm a passionate web developer focused on creating clean, performant interfaces. I enjoy building with modern tools, solving algorithmic problems, and learning design systems. Below are some recent highlights.</p>
+        <div style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+          <div class="pill">Open to internships</div>
+          <div class="pill">Available: Immediately</div>
+          <div class="pill">Preferred: Frontend</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div style="font-weight:800">Project One</div>
+            <div class="tag">React</div>
+          </div>
+          <p>A single-page application with real-time features, optimised images and progressive enhancements.</p>
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <a class="btn btn-outline" href="#">Live</a>
+            <a class="btn btn-outline" href="#">Code</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div style="font-weight:800">Project Two</div>
+            <div class="tag">HTML • CSS</div>
+          </div>
+          <p>Pixel-perfect landing page with accessible markup and fluid typography across devices.</p>
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <a class="btn btn-outline" href="#">Live</a>
+            <a class="btn btn-outline" href="#">Code</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div style="font-weight:800">Algorithm Visualiser</div>
+            <div class="tag">DSA</div>
+          </div>
+          <p>Interactive visualisations to demonstrate sorting and graph algorithms — great for interview prep.</p>
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <a class="btn btn-outline" href="#">Live</a>
+            <a class="btn btn-outline" href="#">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <div style="flex:1;min-width:240px">
+          <div class="skill"><div style="font-weight:700">HTML & CSS</div><div style="margin-left:12px;color:var(--muted)">90%</div></div>
+          <div class="bar"><i style="width:90%"></i></div>
+
+          <div class="skill"><div style="font-weight:700">JavaScript</div><div style="margin-left:12px;color:var(--muted)">80%</div></div>
+          <div class="bar" style="margin-bottom:10px"><i style="width:80%"></i></div>
+
+          <div class="skill"><div style="font-weight:700">React</div><div style="margin-left:12px;color:var(--muted)">75%</div></div>
+          <div class="bar"><i style="width:75%"></i></div>
+        </div>
+
+        <div style="flex:1;min-width:240px">
+          <div class="skill"><div style="font-weight:700">Node.js</div><div style="margin-left:12px;color:var(--muted)">60%</div></div>
+          <div class="bar"><i style="width:60%"></i></div>
+
+          <div class="skill"><div style="font-weight:700">Problem Solving</div><div style="margin-left:12px;color:var(--muted)">85%</div></div>
+          <div class="bar"><i style="width:85%"></i></div>
+
+          <div class="skill"><div style="font-weight:700">UI Design</div><div style="margin-left:12px;color:var(--muted)">70%</div></div>
+          <div class="bar"><i style="width:70%"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="hero-card">
+        <form class="contact-form" onsubmit="sendForm(event)">
+          <input class="input" id="name" placeholder="Your name" required />
+          <input class="input" id="email" placeholder="Your email" type="email" required />
+          <input class="input" id="subject" placeholder="Subject" />
+          <textarea id="message" placeholder="Message" required></textarea>
+          <div style="grid-column:1 / -1;display:flex;gap:8px;justify-content:flex-end">
+            <button class="btn btn-primary" type="submit">Send message</button>
+            <a class="btn btn-outline" href="mailto:you@example.com">Or email me</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <small>Made with ❤️ — Dhairya Tiwari. © <span id="year"></span></small>
+    </footer>
+  </div>
+
+ 
+  <script src="script.js"></script>
+</body>
+</html>
