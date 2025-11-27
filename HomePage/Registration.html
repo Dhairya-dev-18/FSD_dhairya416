@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!-- Dhairya Tiwari Cse-16 2400320100416 -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, white);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 400px;
+      background: #fff;
+      margin: 60px auto;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #2d3436;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #2d3436;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    textarea {
+      resize: none;
+      height: 70px;
+    }
+
+    .dob select {
+      width: 32%;
+      display: inline-block;
+      margin-right: 2%;
+    }
+
+    .btn {
+      width: 100%;
+      background: white;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: white;
+    }
+  </style>
+
+  <!-- FINAL FIXED SCRIPT -->
+  <script>  
+     function validateForm() { 
+
+      const name = document.myform.name.value.trim();
+      const password = document.myform.password.value.trim();
+      const email = document.myform.email.value.trim();
+      const phone = document.myform.phone.value.trim();
+
+      // ------------------ NAME VALIDATION ------------------
+      const namePattern = /^[A-Za-z\s]+$/;
+
+      if (name === "") {
+        alert("Enter Your Name");
+        return false;
+      }
+      else if (!namePattern.test(name)) {
+        alert("Name Not Valid");
+        return false;
+      }
+      else if (name.length < 6) {
+        alert("Name length must be at least 6 characters");
+        return false;
+      }
+
+      // ------------------ PASSWORD VALIDATION ------------------
+      const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+      if (password === "") {
+        alert("Enter your Password");
+        return false;
+      }
+      else if (!passwordPattern.test(password)) {
+        alert("Password must contain at least 8 characters, including uppercase, lowercase, and a digit");
+        return false;
+      }
+
+      // ------------------ EMAIL VALIDATION ------------------
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/;
+
+      if (email === "") {
+        alert("Enter your Email ID");
+        return false;
+      }
+      else if (!emailPattern.test(email)) {
+        alert("Invalid Email Format (must be like name@domain.com)");
+        return false;
+      }
+
+      // ------------------ PHONE VALIDATION ------------------
+      const phonePattern = /^[0-9]{10}$/;
+
+      if (phone === "") {
+        alert("Enter your Phone Number");
+        return false;
+      }
+      else if (!phonePattern.test(phone)) {
+        alert("Phone number must contain exactly 10 digits");
+        return false;
+      }
+
+      alert("Form Submitted Successfully");
+      return true;
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Registration Form</h2>
+
+    <form name="myform" onsubmit="return validateForm()">
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <label for="email">E-mail ID:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <label>Sex:</label>
+      <input type="radio" name="gender" value="male" required> Male
+      <input type="radio" name="gender" value="female"> Female
+      <input type="radio" name="gender" value="other"> Other
+
+      <label>Date of Birth:</label>
+      <div class="dob">
+        <select name="day">
+          <option>Day</option>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<option>${i}</option>`);
+            }
+          </script>
+        </select>
+
+        <select name="month">
+          <option>Month</option>
+          <option>January</option>
+          <option>February</option>
+          <option>March</option>
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+          <option>December</option>
+        </select>
+
+        <select name="year">
+          <option>Year</option>
+          <script>
+            for (let y = 1980; y <= 2025; y++) {
+              document.write(`<option>${y}</option>`);
+            }
+          </script>
+        </select>
+      </div>
+
+      <label>Languages Known:</label>
+      <input type="checkbox" name="lang" value="English"> English
+      <input type="checkbox" name="lang" value="Telugu"> Telugu
+      <input type="checkbox" name="lang" value="Hindi"> Hindi
+      <input type="checkbox" name="lang" value="Tamil"> Tamil
+
+      <label for="address">Address:</label>
+      <textarea id="address" placeholder="Enter your address"></textarea>
+
+      <button type="submit" class="btn" style="background-color: blue;">Submit</button>
+
+    </form>
+  </div>
+
+</body>
+
+</html>
+0

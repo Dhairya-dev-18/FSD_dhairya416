@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Background & Link Styles</title>
+
+    <style>
+        /* 1. Control background image repetition */
+        body {
+            background-image: url("boat.png");  /* replace with any image */
+            background-repeat:repeat;     /* control repetition */
+            background-size: cover;
+        }
+
+        /* 2. Link styling */
+        a:link {
+            color: blue;
+            font-weight: bold;
+        }
+        a:visited {
+            color: purple;
+        }
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+        a:active {
+            color: green;
+        }
+
+        .content {
+            background: white;
+            width: 60%;
+            padding: 20px;
+            margin: 40px auto;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="content">
+    <h2>My Sample Webpage</h2>
+    <p>This page shows how background-repeat and link styles work.</p>
+
+    <p>Click the link below:</p>
+    <a href="https://google.com" target="_blank">Google</a>
+
+</div>
+
+</body>
+</html>
